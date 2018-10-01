@@ -17,7 +17,6 @@ go
 	WHERE sexo='Female'
 	and etnia='Eskimo';
 
-
 --OPERADOR BETWEEN
 	SELECT  a.primeiro_nome,
 	        a.ultimo_nome,

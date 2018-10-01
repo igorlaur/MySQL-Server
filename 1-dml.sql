@@ -54,15 +54,25 @@ SELECT * FROM   funcionarios;
 
 
 	CREATE TABLE Inquilinos (
-	Nome VARCHAR(50),
-	Kitnet VARCHAR(50),
-	VAluguel DECIMAL(10,2)
+	ID int identity(1,1) NOT NULL PRIMARY KEY, /* Not Null = Campo não pode ser vazio. Chave não pode se repetir */ 
+	NOME VARCHAR(50) NOT NULL, /* Eu inseri a regra que o valor nome não pode ser nulo */
+	VAluguel DECIMAL(10,2), /* 10 casas decimais, com 2 casas decimais após a vírgula */
+	SETOR VARCHAR(30)
 	)
 
 	SELECT * FROM Inquilinos
 
-	INSERT INTO Inquilinos (Nome, Kitnet, VAluguel) VALUES ('Décio', 'Grande', 1350),
-	('Thaís', 'Pequena', 1100), ('Akira', 'Média', 1300), ('Ana', 'Luxo', 1794)
+	INSERT INTO Inquilinos (Nome, VAluguel) VALUES ('Décio', 1350), ('Thaís', 1100), ('Akira', 1300),
+	('Ana', 1794)
 
 	UPDATE Inquilinos SET VAluguel = VAluguel * 1.05
 
+	Delete Inquilinos
+
+
+	CREATE TABLE Inquilinoss (
+	NOME VARCHAR(50),
+	VAluguel DECIMAL(10,2)
+	)
+	SELECT NOME, VAluguel FROM Inquilinoss
+	INSERT INTO Inquilinoss (NOME,VAluguel) VALUES ('Igor', 1500)

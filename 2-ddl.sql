@@ -142,3 +142,6 @@ FROM   SENSO; 
  select * from #BK_SENSO2
 --verifanco registro 
  select * from SENSO;
+
+
+ 
